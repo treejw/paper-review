@@ -145,7 +145,7 @@ Tokenization: 주어진 corpus에서 token으로 나누는 작업. 보통 의미
 ### ▪ SentencePiece
 - [참고1](https://huffon.github.io/2020/07/05/tokenizers/#sentencepiece) | [참고2](https://wikidocs.net/86657)
 - 특징
-   - 앞의 알고리즘과 달리, 입력 문장을 Raw Stream으로 취급해 공백을 포함한 모든 캐릭터를 활용해, BPE 혹은 Unigram을 적용하며 사전을 구축
+   - 앞의 알고리즘과 달리, 입력 문장을 Raw Stream으로 취급해 **공백을 포함한 모든 캐릭터를 활용**해, BPE 혹은 Unigram을 적용하며 사전을 구축
    - Transformers 라이브러리가 지원하는 모델들 중 SentencePiece를 활용하는 모든 모델들의 토크나이저는 Unigram을 활용해 훈련됨.
    - ALBERT, XLNet 등에서도 사용됨.
 
