@@ -106,7 +106,7 @@
 
 2) 각 층의 출력값 별로 가중치를 곱한다.
 이 가중치를 여기서는 s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub>라고 가정.
-<img src="https://wikidocs.net/images/page/33930/concatenate.PNG">
+<img src="https://wikidocs.net/images/page/33930/weight.PNG">
 
 3) 각 층의 출력값을 모두 더한다.
 <img src="https://wikidocs.net/images/page/33930/weightedsum.PNG">
