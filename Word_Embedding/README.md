@@ -77,6 +77,7 @@
       <img height="65;" src="https://user-images.githubusercontent.com/42428487/100283235-721a2e00-2fb0-11eb-985c-929663d78157.png">
 
    - backward LM
+      -  tk+1부터 tN까지의 시퀀스 정보를 가지고 tk의 확률 계산
       
       <img height="60;" src="https://user-images.githubusercontent.com/42428487/100283653-40ee2d80-2fb1-11eb-8a99-132ed4941471.png">
 
@@ -86,6 +87,7 @@
 
 
 - biLM의 입력으로 `char CNN`이라는 임베딩을 사용.
+
 
 <img src="https://wikidocs.net/images/page/33930/playwordvector.PNG">
 <img height="70;" src="https://user-images.githubusercontent.com/42428487/100285794-da6b0e80-2fb4-11eb-8e39-e385bc923abc.png">
@@ -142,6 +144,7 @@
    - [wikidocs](https://wikidocs.net/33930) | 
    [Baek Kyun Shin Blog](https://bkshin.tistory.com/entry/NLP-12-%EA%B8%80%EB%A1%9C%EB%B8%8CGloVe) | 
    [Dos tacos Blog](https://dos-tacos.github.io/paper%20review/deep-contextualized-word-representations/) | 
-   [Youtube](https://www.youtube.com/watch?v=6K3joYQ0DYE)
+   [Youtube](https://www.youtube.com/watch?v=6K3joYQ0DYE) |
+   [char CNN paper](https://arxiv.org/abs/1508.06615)
    
    
