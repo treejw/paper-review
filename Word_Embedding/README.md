@@ -140,7 +140,7 @@
    - paper: [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf) 
    - [wikidocs](https://wikidocs.net/22885)
 - ELMo
-   - paper: [Deep contextualized word representaions (2018)](https://aclweb.org/anthology/N18-1202)
+   - paper: [Deep contextualized word representations (2018)](https://aclweb.org/anthology/N18-1202)
    - [wikidocs](https://wikidocs.net/33930) | 
    [Baek Kyun Shin Blog](https://bkshin.tistory.com/entry/NLP-12-%EA%B8%80%EB%A1%9C%EB%B8%8CGloVe) | 
    [Dos tacos Blog](https://dos-tacos.github.io/paper%20review/deep-contextualized-word-representations/) | 
