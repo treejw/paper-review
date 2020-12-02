@@ -37,6 +37,6 @@
 
 ---
 ### 참고
-- paper : - [Attention is all you need (Transformer)](https://arxiv.org/abs/1706.03762)
+- paper : [Attention is all you need (Transformer)](https://arxiv.org/abs/1706.03762)
 - [wikidocs](https://wikidocs.net/31379) | 
    [harper's Blog](https://machinereads.com/2018/09/26/attention-is-all-you-need/) 
