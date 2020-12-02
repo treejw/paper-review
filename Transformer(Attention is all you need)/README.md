@@ -1,6 +1,6 @@
 # Attention is all you need (Transformer)
 ## Model
-![image](https://user-images.githubusercontent.com/41243762/100832555-73b18d80-34ab-11eb-9ac6-dd6a0bb5763a.png)
+![image](https://user-images.githubusercontent.com/41243762/100835929-bf673580-34b1-11eb-8d45-6a3904b8cbd3.png)
 ## Encoder
 ### 1. word embedding & positional encoding
 - 단어의 위치정보를 반영하기 위한 방법
