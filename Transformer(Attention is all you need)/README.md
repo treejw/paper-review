@@ -19,7 +19,7 @@
    - 여러 관점에서의 관측으로 문장의 모호성 보완
    
    <img height="300;" src="https://wikidocs.net/images/page/31379/transformer12.PNG">
-   <img height="100;" src="https://wikidocs.net/images/page/31379/transformer16.PNG">
+   <img height="150;" src="https://wikidocs.net/images/page/31379/transformer16.PNG">
 
    ![image](https://user-images.githubusercontent.com/41243762/100832684-afe4ee00-34ab-11eb-88eb-f81792eed60d.png)
 
@@ -32,7 +32,6 @@
 <br>
    
 ### 4. Feed Forward
-![image](https://user-images.githubusercontent.com/41243762/100834143-b6c13000-34ae-11eb-9acc-9af8be84c971.png)
 
 <img height="200;" src="https://wikidocs.net/images/page/31379/positionwiseffnn.PNG">
 <br>
