@@ -28,3 +28,15 @@
 - Q : decoder의 입력값
 - K, V : encoder의 출력값 
 - encoder의 K와 decoder 현재 워드의 Q의 연관성을 계산 후 encoder V를 곱하여 번역성능 상향
+
+
+
+<br><br>
+
+
+
+---
+### 참고
+- paper : - [Attention is all you need (Transformer)](https://arxiv.org/abs/1706.03762)
+- [wikidocs](https://wikidocs.net/31379) | 
+   [harper's Blog](https://machinereads.com/2018/09/26/attention-is-all-you-need/) 
