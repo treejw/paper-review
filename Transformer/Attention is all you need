@@ -1,0 +1,30 @@
+# Attention is all you need (Transformer)
+## Model
+![image](https://user-images.githubusercontent.com/41243762/100832555-73b18d80-34ab-11eb-9ac6-dd6a0bb5763a.png)
+## Encoder
+### 1. word embedding & positional encoding
+- 단어의 위치정보를 반영하기 위한 방법
+- sin, cos 함수를 이용 
+   - |1|의 값을 갖는다.
+   - 입력 문장의 길이에 상관없이 상대적인 위치정보를 줄 수 있다.
+### 2.  Multi-head Attention
+- 1의 결과에 weight(q, k, v)를 곱해서 각 워드의 Query, Key, Value를 계산
+- Scaled dot-product attention
+   - Q * K = attention score (단어의 연관성)
+   - scale & softmax * V = attention value (문장 안에서 연관성을 포함한 워드의 벡터)
+- Multi-head
+   - 여러 관점에서의 관측으로 문장의 모호성 보완
+![image](https://user-images.githubusercontent.com/41243762/100834018-7b266600-34ae-11eb-9b09-7821057c354d.png)
+![image](https://user-images.githubusercontent.com/41243762/100832684-afe4ee00-34ab-11eb-88eb-f81792eed60d.png)
+### 3. Add & Norm
+- positional encoding의 위치정보 손실 방지
+- Norm을 통한 학습효과 향상
+### 4. Feed Forward
+![image](https://user-images.githubusercontent.com/41243762/100834143-b6c13000-34ae-11eb-9acc-9af8be84c971.png)
+## Decoder
+### 1. Masked
+- 학습을 할 때, 출력하지 않은 값은 가리기 위함.
+### 2.  Multi-head Attention
+- Q : decoder의 입력값
+- K, V : encoder의 출력값 
+- encoder의 K와 decoder 현재 워드의 Q의 연관성을 계산 후 encoder V를 곱하여 번역성능 상향
