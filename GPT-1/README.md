@@ -131,5 +131,5 @@
 ---
 ### 참고
 - paper : [Improving Language Understanding by Generative Pre-Training (GPT-1)](http://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
-- [Young-Geun Kim's Blog](https://medium.com/@eyfydsyd97/%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-improving-language-understanding-by-generative-pre-training-gpt1-c65bed865990) | [Jeong Ukjae's Blog](https://jeongukjae.github.io/posts/gpt-review/)
+- [Young-Geun Kim's Blog](https://medium.com/@eyfydsyd97/%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-improving-language-understanding-by-generative-pre-training-gpt1-c65bed865990) | [Jeong Ukjae's Blog](https://jeongukjae.github.io/posts/gpt-review/) | [hipgyung's Blog](https://hipgyung.tistory.com/24)
 
