@@ -48,7 +48,7 @@
 
 ### 3.2. Supervised fine-tuning
 - 식(1)로 모델을 학습한 후, supervised target task에 대해 parameters를 조정.
-   - softmax를 통해 input tokens *x<sub>1</sub>, ... , x<sub>m</sub>*에 해당하는 label *y*를 예측하는 방식
+   - softmax를 통해 input tokens *x<sub>1</sub>, ... , x<sub>m</sub>* 에 해당하는 label *y*를 예측하는 방식
       > <img height="35;" src="https://user-images.githubusercontent.com/42428487/103034961-7c2c4e00-45a9-11eb-8ec8-61d9125c3dfe.png"> ... 식(3)
    
    - P(U)`(pre-training의 결과)`를 입력으로 하는 linear layer를 추가. (아래는 위 task의 목적함수, C는 labeled dataset)
@@ -88,7 +88,7 @@
 
 <br>
 
-- ** Question Answering(질의 응답) and Commonsense Reasoning(상식 추론)**
+- **Question Answering(질의 응답) and Commonsense Reasoning(상식 추론)**
    - `Context text Z`, `질문 q`, `가능한 답변 set {a_k}`가 주어진다면,
    - 구분 토큰`($)`을 포함하여 `Context`와 `질문`에 `가능한 각 답변`과 연결. → [z; q; $; ak]
    - 각각 linear layer을 통과한 값들은 softmax layer를 통해 정규화되어, 가능한 답변에 대한 출력 분포 생성. 
