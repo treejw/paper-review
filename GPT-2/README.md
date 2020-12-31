@@ -106,5 +106,5 @@
 
 ---
 ### 참고
-- paper : Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
+- paper : [Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
 - [github](https://github.com/openai/gpt-2) | [Jeong Ukjae's Blog](https://jeongukjae.github.io/posts/1-gpt2-revivew/) | [Jay Alammar's blog](http://jalammar.github.io/illustrated-gpt2/?fbclid=IwAR2-9C2kKU-mObfA89Th47SqsA2kniJUkdXvjwtzK14DvnwB_iApYaIwsP0) | [Gorio Learning blog](https://greeksharifa.github.io/nlp(natural%20language%20processing)%20/%20rnns/2019/08/28/OpenAI-GPT-2-Language-Models-are-Unsupervised-Multitask-Learners/)
