@@ -34,7 +34,7 @@
 <br>
 
 ## 2. Approach
-#### ◼ NLP 모델링
+### ◼ NLP 모델링
 1. 보통 NLP 모델링은 각 원소가 일련의 symbol로 구성된 예제에서 비지도분포 추정을 하는 것으로 정의
 2. 언어는 자연적으로 연속된 순서를 갖기 때문에 조건부확률의 곱에 따른 합동확률로 구해진다.
 ![image](https://user-images.githubusercontent.com/41243762/103394185-4b7c8380-4b6a-11eb-9d54-75ba699f787d.png)
@@ -49,7 +49,7 @@
    - 즉, 비지도목적함수에서 수렴하게 할 수 있다.
 <br>
 
-#### ◼ Training Dataset
+### ◼ Training Dataset
 
 - 기존 연구 대부분에서 사용된 dataset은 뉴스와 같은 한 영역에서만 가져온 data로 구성되어 있다.
 - GPT-2는 다양한 출처로부터 가져온다.
@@ -61,7 +61,7 @@
    - 위키피디아는 다른 dataset에서 흔하고, 학습과 측정 단계에서의 데이터가 겹치는 문제로 인해 분석이 복잡해질 수 있어 제외했다.
 <br>
 
-#### Model
+### ◼ Model
 - Transformer가 기본 구조이며, GPT-1의 구조를 대부분 따른다.
    - Layer norm이 각 sub-block의 입력으로 옮겨졌다.
    - Layer norm이 마지막 self-attention block 이후에 추가되었다.
@@ -81,24 +81,24 @@
 |762M|36|1280|
 |1542M|48|1600|
 
-#### Language Modeling
+### Language Modeling
 ![image](https://user-images.githubusercontent.com/41243762/103394961-09097580-4b6f-11eb-996f-3fe43dbdea77.png)
 
-##### LAMBADA
+#### ◼ LAMBADA
 텍스트의 장거리 의존성을 평가한다.
 - ACC 는 19% → 52.66%
 - perplexity는 99.8 → 8.6
 으로 향상시켰다.
 
-##### Children’s Boot Test (CBT)
+#### ◼ Children’s Boot Test (CBT)
 품사에 따른 언어 모델 성능 측정 dataset
 ![image](https://user-images.githubusercontent.com/41243762/103395008-41a94f00-4b6f-11eb-9d1c-c56d0ae163a9.png)
 
-##### Winograd Schema Challenge
+#### ◼ Winograd Schema Challenge
 텍스트의 중의성을 해석하는 능력을 측정하여, 일반상식 추론능력을 평가한다.
 ![image](https://user-images.githubusercontent.com/41243762/103395104-b3819880-4b6f-11eb-8890-c0baaab0bd22.png)
 
-###### 나머지 실험들은 생략.
+##### 나머지 실험들은 생략.
 
 
 
