@@ -1,4 +1,4 @@
-# OpenAI GPT-2 - Language Models are Unsupervised Multitask Learners `2018`
+# OpenAI GPT-2 - Language Models are Unsupervised Multitask Learners `2019.2`
 
 ## Abstract
 
