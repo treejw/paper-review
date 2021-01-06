@@ -110,7 +110,7 @@
    
    - 수식
    
-      **Q<sup>T</sup>K = (W<sub>q</sub>E<sub>x<sub>j</sub></sub> + U<sub>i</sub>))<sup>T</sup> (W<sub>k</sub>(E<sub>x<sub>j</sub></sub> + U<sub>j</sub>))**
+      **Q<sup>T</sup>K = (W<sub>q</sub>(E<sub>x<sub>j</sub></sub> + U<sub>i</sub>))<sup>T</sup> (W<sub>k</sub>(E<sub>x<sub>j</sub></sub> + U<sub>j</sub>))**
       
       <img height="120;" src="https://user-images.githubusercontent.com/42428487/103710264-fa501200-4ff7-11eb-90c7-21db57e5a6a6.png">
       
