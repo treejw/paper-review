@@ -1,4 +1,4 @@
-# XLNet: Generalized Autoregressive Pretraining for Language Understanding `2019.7`
+# RoBERTa: A Robustly Optimized BERT Pretraining Approach `2019.7`
 
 ## Abstract
 - BERT는 undertraining 되어 있다.
