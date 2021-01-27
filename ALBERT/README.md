@@ -59,7 +59,7 @@ ALBERT는 GELU를 사용하는 transformer encoder를 사용한다는 점에서 
 
 - 기존에 이미 **Feed Forward Network(FFN) 파라미터만 공유** 또는 **Attention 파라미터만 공유**하는 여러가지 방법이 존재함.
 
-- 그러나, ALBERT는 layer의 모든 파라미터를 공유하는 방식임. 
+- 그러나, **ALBERT는 layer의 모든 파라미터를 공유하는 방식**임. 
 - 즉, BERT가 transformer block 1번~12번을 거쳤다면, ALBERT는 1개의 transformer block을 12번 거치는 방식.
 
 ![image](https://user-images.githubusercontent.com/42428487/105889180-3dc6fa80-6051-11eb-893a-98020de4e742.png)
