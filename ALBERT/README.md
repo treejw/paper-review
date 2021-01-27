@@ -101,13 +101,13 @@ ALBERT는 GELU를 사용하는 transformer encoder를 사용한다는 점에서 
 
 ## 4. EXPERIMENTAL RESULTS
 
-### OVERALL COMPARISON BETWEEN BERT AND ALBERT
+### ◼ OVERALL COMPARISON BETWEEN BERT AND ALBERT
 ![image](https://user-images.githubusercontent.com/42428487/105894946-37884c80-6058-11eb-80cb-c244e8ba91bb.png)
 
-### CROSS-LAYER PARAMETER SHARING
+### ◼ CROSS-LAYER PARAMETER SHARING
 ![image](https://user-images.githubusercontent.com/42428487/105895048-5ab2fc00-6058-11eb-9dc8-aee628dcc7b8.png)
 
-### WHAT IF WE TRAIN FOR THE SAME AMOUNT OF TIME?
+### ◼ WHAT IF WE TRAIN FOR THE SAME AMOUNT OF TIME?
 ![image](https://user-images.githubusercontent.com/42428487/105895105-6e5e6280-6058-11eb-9a3e-9b680caf25a9.png)
 
 
