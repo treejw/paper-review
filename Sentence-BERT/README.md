@@ -24,6 +24,7 @@
 
 [Sentence-BERT]
 - pretraining 부분에서 **siamese** and **triplet network** 구조를 가지는 **Sentence-BERT**를 제안
+siamse network : 두 개의 input을 각각 하나의 네트워크에 집어 넣는 것
         
     이러한 구조는 
         
