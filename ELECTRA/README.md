@@ -110,3 +110,10 @@ GLUE 데이터셋은 ELECTRA에 간단한 linear classifier 추가, SQuAD는 XLN
 
 ![image](https://user-images.githubusercontent.com/41942097/107438014-37697000-6b73-11eb-9525-f7ff0d6343f6.JPG)
 
+
+<br><br>
+
+---
+### 참고
+- paper : [https://arxiv.org/pdf/2003.10555.pdf)
+- [jeonsworld](https://jeonsworld.github.io/NLP/electra/)
