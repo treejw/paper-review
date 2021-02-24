@@ -72,5 +72,5 @@
 - 학습 중 에너지 사용량
 ---
 ### 참고
-- paper : [https://arxiv.org/pdf/2003.10555.pdf)
-- [jeonsworld](https://jeonsworld.github.io/NLP/electra/)
+- [paper](https://arxiv.org/abs/2005.14165)
+- [littlefoxdiary](https://littlefoxdiary.tistory.com/44)
