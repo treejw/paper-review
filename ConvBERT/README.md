@@ -4,12 +4,11 @@
 
 - BERT는 Global 관점에서  Self-Attention을 하기 때문에 전체입력에 대한 attention map을 생성한다. 이것은 local dependency가 적용되지 않아 self attention head는 전체를 학습하게 되는데 여기에서 많은 메모리와 계산비용이 낭비되고 있다.
 
-- (electra나 roberta등도 이를 문제 삼았던 기억 추가하기)
 
 - 따라서 local dependency를 반영하는 모델을 만들기 위해서 기존의 self-attention head 대신 새로운 attention head인 span-based dynamic convolution을 제안한다. 
 
 
-- span-based dynamic convolution = Convolution Heads(논문제안) + Self-Attention Head(기존 BERT)
+-  Convolution을 Self-Attention에 통합한 Mixed Attention Mechanism을 제안
   - Local & Global Context를 모두 효과적으로 학습할 수 있다.
 
 - 실험 결과 ConvBERT는 기존의 BERT와 ELECTRA 모델보다 성능과 비용면에서 이점을 보여줌.
@@ -18,23 +17,11 @@
 <br>
 
 ## Introduction
-- BERT와 같이 Comprehensive Representations을 학습하기 위해 Multi-head Self-Attention에 지나치게 의존하는 구조는 계산 비용면에서 낭비가 있다.
-  - BERT의 Self-Attention Heads는 non-local operator이지만, 자연어의 고유한 특성상 Local Dependency를 학습해야함.
-  - 저자들의 실험 결과 BERT를 Downstream Task를 위한 Fine-Tuning하는 과정에서 Self Attention head 몇 개를 지워도 성능 저하가 일어나지 않았다고 함.
-
-- 아이디어 : Local Operation으로 Attention Head 몇 개를 대체한다면 낭비를 자연적으로 줄일 수 있지 않을까? & Convolution이 Local Feature Extraction에서 우수한 면을 보이므로 Local Operator로 잘 동작하지 않을까?
-
-- 방법 : Convolution을 Self-Attention에 통합한 Mixed Attention Mechanism을 제안
-
-- 아래 그림의 (a)를 보면 Self-Attention은 모든 토큰을 가지고 Global Dependency를 계산하지만, 저자는 현재 토큰의 local span을 가지고 Local Dependency를 포착하고자 함
-
-- 이를 위해 모든 토큰에 대해 동일한 파라미터를 공유하는 standard convolution을 사용하는 것보다 Dynamic Convolution을 사용하는 것이 토큰 사이의 local dependency를 보다 유연하게 포착할 수 있음.
-
-- 하지만 Dynamic Convolution은 서로 다른 컨텍스트에 위치한 같은 토큰을 구분하지 못하고 동일한 Kernel을 만들어낸다는 문제가 있다. 예를 들어, 그림(b)에서 can에 해당하는 커널은 모두 동일하다.
-
-- 이를 해결하기 위해 하나의 토큰을 가지고 커널을 만들지 않고 Span을 사용하여 보다 adaptive convolution kernel을 만들 수 있는 Span-based dynamic convolution을 제안하였다. 그림(c)를 보면 3 개의 can을 통해 만들어진 Kernel이 모두 다른 것을 볼 수 있다.
-
-- 이렇게 만들어진 Span-based dynamic convolution을 사용하여 global information과 local information 모두 더 잘 capture할 수 있는 Convolutional Self-attention (Mixed Attention)을 만들었다.
+- BERT와 같이  Multi-head Self-Attention에 지나치게 의존하는 구조는 계산 비용면에서 낭비가 있다.
+  - 자연어의 고유한 특성상 Local Dependency를 학습해야함.
+  - 논문실험 결과 BERT를 Downstream Task를 위한 Fine-Tuning하는 과정에서 Self Attention head 몇 개를 지워도 성능 저하가 일어나지 않았다고 함.
+    : local operation으로 낭비되는 attention head 대체
+    : convolution의 local feature를 잘 추출한다는 특징을 이용
 
 - Convolutional Self-Attention으로 만들어진 ConvBERT를 통해 더 적은 비용과 파라미터로 GLUE 벤치마크에서 
 BERT-base보다 5.5 높고, ELECTRA-base보다 0.7 높은 점수를 달성하였다고 한다.
