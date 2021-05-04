@@ -2,7 +2,7 @@
 
 ## Abstract
 
-- BERT는 Global 관점에서  Self-Attention을 하기 때문에 전체입력에 대한 attention map을 생성한다. 이것은 local dependency가 적용되지 않아 self attention head는 전체를 학습하게 되는데 여기에서 많은 메모리와 계산비용이 낭비되고 있다.
+- BERT는 Global 관점에서  Self-Attention을 하기 때문에 전체입력에 대한 attention map을 생성하는 과정에서 local dependency가 적용되지 않는다. 기존의 BERT의 self attention head는 전체를 학습하게 되는데 여기에서 많은 메모리와 계산비용이 낭비되고 있다.
 
 
 - 따라서 local dependency를 반영하는 모델을 만들기 위해서 기존의 self-attention head 대신 새로운 attention head인 span-based dynamic convolution을 제안한다. 
