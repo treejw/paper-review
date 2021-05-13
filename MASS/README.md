@@ -49,3 +49,28 @@ Language generation분야에서 데이터가 적을때도 효과적으로 pre-tr
 
 ## 3. Experiment
  > encoder 6개, decoder 6개, embedding 1024 로 English-French, English-German, English-Romanian 수행(Pre-train)
+
+### 3.1 NMT
+
+![image](https://user-images.githubusercontent.com/41942097/118116291-112ec700-b425-11eb-89b4-bf60a7072ad6.png)
+
+<br>
+<br>
+
+### 3.2 Text Summarization
+
+![image](https://user-images.githubusercontent.com/41942097/118116676-84d0d400-b425-11eb-8c14-753cc161174d.png)
+
+<br>
+<br>
+
+### 3.3 Conversational Response Generation
+
+![image](https://user-images.githubusercontent.com/41942097/118116797-b0ec5500-b425-11eb-99c2-2229a4f1839f.png)
+
+<br>
+<br>
+
+### 3.4 k의 의미
+
+![image](https://user-images.githubusercontent.com/41942097/118116886-d2e5d780-b425-11eb-85c1-b01b442462e9.png)
