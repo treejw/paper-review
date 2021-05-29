@@ -2,12 +2,14 @@
 
 ## Abstract
 ◼ 무작위 MASK가 아닌 span MASK를 하여 성능을 향상시킨다.
+
 ◼ 예측 또한 토큰 하나에 대한 예측이 아닌 span boundary representations을 예측하여 범위 전부를 예측하는 방식으로 성능을 향상시킨다.
 
 <br>
 
 ## 1. Introduction
 ◼ BERT와 같은 모델은 word, subword를 마스킹해 pretrain을 하여 성능을 크게 향상시켰음. 그러나 많은 NLP task에는 text span간 relationship 추론이 필요하다.
+
 ◼ 따라서 random contiguous span과 그에 따른 학습 방법을 제안한다.
 
 <br>
@@ -35,8 +37,11 @@
 
 ## 3. Experiments
 ◼ BERT - 기본 BERT
+
 ◼ Our BERT - spanbert와 같은 데이터로 학습
+
 ◼ Our BERT-1seq - 2.3 방법을 적용하여 NLP 없이 1개의 full-sequence로 학습
+
 ◼ SpanBERT
 
 ### RESERT
