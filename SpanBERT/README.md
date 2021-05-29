@@ -29,6 +29,7 @@
 ### 2.2 Span Boundary Objective (SBO)
 ◼ Span Boundary의 token과 position embedding 값을 학습에 사용
 ![image](https://user-images.githubusercontent.com/41243762/120059943-a5d52e00-c08f-11eb-8179-1626860ed7a0.png)
+
 ◼ MLM과 SBO를 합하여 최종 Loss로 사용한다.
 ![image](https://user-images.githubusercontent.com/41243762/120060000-12e8c380-c090-11eb-9ccc-01a6814c5301.png)
 
