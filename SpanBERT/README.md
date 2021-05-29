@@ -41,7 +41,7 @@
 
 ◼ Our BERT - spanbert와 같은 데이터로 학습
 
-◼ Our BERT-1seq - 2.3 방법을 적용하여 NLP 없이 1개의 full-sequence로 학습
+◼ Our BERT-1seq - 2.3 방법을 적용하여 NSP 없이 1개의 full-sequence로 학습
 
 ◼ SpanBERT
 
