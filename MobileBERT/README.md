@@ -94,14 +94,14 @@
 - 기존 BERT의 각 layer는 이전 layer의 output을 input으로 사용하므로, 각 layer가 반환하는 feature map이 Teacher Model과 최대한 비슷하게 나오는 것이 중요함.
 - 따라서 Teacher Model과 MobileBERT의 feature map 사이의 Mean Squared Error loss를 목적함수로 사용.
    > ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc5IOJf%2FbtqQstxWh9L%2FIGi6qxgZUo4cPm09hj1Dk1%2Fimg.png) <br>
-   > _l_은 layer index, _T_는 sequence 길이, _N_은 feature map size
+   > _l_ 은 layer index, _T_ 는 sequence 길이, _N_ 은 feature map size
 
 <br>
 
 #### 2. Attention Transfer (AT)
 - 각 attention head에서 Teacher Model과 MobileBERT의 self attention 분포간의 KL-divergence를 활용
    > ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbhP1xj%2FbtqQu3MexEh%2F05Xrp2KJBYEFfULJKxXOHk%2Fimg.png) <br>
-   > _A_는 attention head 개수 <br>
+   > _A_ 는 attention head 개수 <br>
    > 각 layer에서 attention transfer를 위해 Teacher Model과 Student Model 모두 attention head 개수를 4로 설정. 
 
 <br>
