@@ -6,4 +6,6 @@
 <br> 
 
 ### 참고
-[NLP 논문 리스트](https://github.com/treejw/Study_NLP/issues/1)
+[NLP 논문 리스트](https://github.com/treejw/Paper_Review/issues/1)
+
+[CV 논문 리스트](https://github.com/treejw/Paper_Review/issues/2)
