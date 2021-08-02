@@ -2,7 +2,7 @@
 
 ## Abstract
 - Transfer Learning은 NLP에서 효과적인 기술로 여겨지고 있으며, 다양한 접근방식 방법론들이 발표되어 왔음.
-   - Transfer Learning : 많은 양의 데이터로 per-training -> downstream task로 finetuning
+   - Transfer Learning : 많은 양의 데이터로 pre-training -> downstream task로 finetuning
 
 - 이 논문에서는 모든 text기반 language problem들을 **text-to-text format**으로 변환하는 통합된 프레임워크를 도입하여 NLP를 위한 transfer learning 방법을 제안.
 
@@ -164,7 +164,7 @@
 ![image](https://user-images.githubusercontent.com/42428487/127785451-6d47d827-4fa0-4bcf-bb3e-b6609e9a9ea7.png)
 
 
-#### 3.3.4 Corruptiong Spans
+#### 3.3.4 Corruption Spans
 - corruption span length에 따른 성능 비교
 ![image](https://user-images.githubusercontent.com/42428487/127785442-4f0980b4-8052-40b0-82ef-411e6957e053.png)
 
