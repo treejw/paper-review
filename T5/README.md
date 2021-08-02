@@ -223,11 +223,11 @@
 - 각 task의 데이터 비율을 얼마나 할지가 학습에 영향을 끼침 -> 본 논문에서는 아래 3가지 방법 사용 & 비교
 
 -  **Example-Proportional mixing** : 각 테스크 별 데이터셋 사이즈에 비례해서 샘플링
--  **Equal mixing** : 같은 확률로 샘플링 해서 믹싱하는 것.
+-  **Equal mixing** : 각 task 데이터셋을 같은 확률로 샘플링 해서 학습하는 것.
 -  **Temperature-scaled mixing**
    - multilingual BERT 에서 사용한 방법
    - 각 데이터를 T개로 나누고 하나씩 가져와 합치는 방식
-   - `T=1` (Exaple-Proporional mixing) , `T=∞` (Equal mixing)
+   - `T=1` (Example-Proportional mixing) , `T=∞` (Equal mixing)
 
 ![image](https://user-images.githubusercontent.com/42428487/127786709-a03b0d8b-2262-4cba-b7ba-fa9b28c158f3.png)
 
