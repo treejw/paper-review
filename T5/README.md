@@ -225,7 +225,7 @@
 -  **Example-Proportional mixing** : 각 테스크 별 데이터셋 사이즈에 비례해서 샘플링
 -  **Equal mixing** : 같은 확률로 샘플링 해서 믹싱하는 것.
 -  **Temperature-scaled mixing**
-   - multilingulal BERT 에서 사용한 방법
+   - multilingual BERT 에서 사용한 방법
    - 각 데이터를 T개로 나누고 하나씩 가져와 합치는 방식
    - `T=1` (Exaple-Proporional mixing) , `T=∞` (Equal mixing)
 
