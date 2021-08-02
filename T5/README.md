@@ -245,7 +245,7 @@
 
 - Supervised multi-task pre-training
    - Pre-Training : Examples-proportional mixture (`K=2^19`)
-   - Fine-Tuning : 독립적으로 학습
+
 
 ![image](https://user-images.githubusercontent.com/42428487/127786739-789d72ce-32c2-4b4d-87f6-24bf212fd386.png)
 
