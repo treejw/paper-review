@@ -176,7 +176,7 @@
 ### 3.4 Pre-training dataset
 - pre-training dataset에 따른 성능 비교
 
-#### 3.4.1 Unlabeld datasets
+#### 3.4.1 Unlabeled datasets
 ![image](https://user-images.githubusercontent.com/42428487/127785992-227b8cd6-95b8-445d-ae1f-41036facc0e8.png)
 - C4로 pre-training 시 전반적으로 성능이 좋음.
 - in-domain unlabeled data로 pre-training -> in-domain downstream tasks 일 경우, 성능이 좋음 (ex. Wikipedia -> SQuAD_
