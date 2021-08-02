@@ -2,7 +2,7 @@
 
 ## Abstract
 - Transfer Learning은 NLP에서 효과적인 기술로 여겨지고 있으며, 다양한 접근방식 방법론들이 발표되어 왔음.
-   - Transfer Learning : 많은 양의 데이터로 per-training -> donstream task로 finetuning
+   - Transfer Learning : 많은 양의 데이터로 per-training -> downstream task로 finetuning
 
 - 이 논문에서는 모든 text기반 language problem들을 **text-to-text format**으로 변환하는 통합된 프레임워크를 도입하여 NLP를 위한 transfer learning 방법을 제안.
 
