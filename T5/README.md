@@ -32,7 +32,7 @@
    - 코드를 포함하는 중괄호 "{}"가 포함된 페이지는 제거
    - 중복을 제거하기 위해 3-sentence span 이용 (데이터 셋에 똑같은 span이 있으면 제거)
    - 영어인 text에만 초점을 맞추므로 *langdetect* 를 이용하여 영어일 확률이 0.99보다 작으면 해당 페이지 사용안함.
-- 위의 작업으로 750GB의 ptre-training을 위한 data set을 얻었으며 C4라고 부름. ([TensorFlow Datasets](https://www.tensorflow.org/datasets/catalog/c4)에 공개되어 있음) 
+- 위의 작업으로 750GB의 pre-training을 위한 data set을 얻었으며 C4라고 부름. ([TensorFlow Datasets](https://www.tensorflow.org/datasets/catalog/c4)에 공개되어 있음) 
 
 <br>
 
