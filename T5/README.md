@@ -233,7 +233,6 @@
 
 
 #### 3.5.3 Combining multi-task learning with fine-tuning
-- Unsupervised Pre-training + Multi-task Learning + Fine-tuning
 
 - Multi-task pre-training + fine-tuning
    - Pre-Training : Example-proportional mixture (`K=2^19`, `K`: artificial data set size limit)
