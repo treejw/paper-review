@@ -201,7 +201,7 @@
 
 <img height="400;" src="https://user-images.githubusercontent.com/42428487/127786296-e47d736b-c29d-41a6-a5ce-f5a37db7faa2.png">
 
-- Transformer Laye의 Feed-Forward Layer 뒤에 “Adapter Layer”를 추가 해서 학습하는 방식
+- Transformer Layer의 Feed-Forward Layer 뒤에 “Adapter Layer”를 추가해서 학습하는 방식
 - Adapter Layer의 차원을 d로 두고 실험 진행
 
 
