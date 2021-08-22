@@ -27,7 +27,7 @@
 
 ![image](https://user-images.githubusercontent.com/41942097/130332823-225e9770-0ac8-4793-ba7c-c9481db7b513.png)
 
-![image](https://user-images.githubusercontent.com/41942097/130332558-6fc110e9-58b8-4486-90b1-b0317773a4c9.png
+![image](https://user-images.githubusercontent.com/41942097/130332558-6fc110e9-58b8-4486-90b1-b0317773a4c9.png)
 
 - COCO는 train2017, val2017을 기준으로 삼았다.
 - WOD의 train은 798 sequences이고 val은 202 sequence이다. (1sequence는 ~20 frame, frame 당 5개의 카메라로 찍힌 각 이미지 존재)
