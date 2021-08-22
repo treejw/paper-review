@@ -11,7 +11,7 @@
 
 - 다양한 scale의 이미지 및 domain이 부족하다
 - COCO 평가방법이 제대로 되고있지 않다. 
- => 대부분의 detector들은 24epoch, lr 0.01~0.02, image size 1333~800 정도로 학습되고 있다. 이는 공평한 비교가 못된다.
+ => 대부분의 detector들은 24epoch, lr 0.01 ~ 0.02, image size 1333 ~ 800 정도로 학습되고 있다. 이는 공평한 비교가 못된다.
 - multi-scale의 분석방법으로 부족하다. 
  => Res2Net backbone, SEPC neck, ATSS head와 같이 구성된 multi-scale 모델이 유행하고 있는데 이는 COCO 외의 데이터에서는 효율성, 결합성, 특징 등에 대하여 분석이 부족하다.
  <br>
