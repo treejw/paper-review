@@ -19,8 +19,8 @@
 
 - 이어 다양한 연구들이 진행되고 Global Descriptor에도 여러가지 변형 및 발전이 있어왔다.  
    - Global pooling method: Convolution layer의 activation을 활용한 기법
-      - SPoC(Sum Pooling of Convolution): 큰 영역
-      - MAC(Maximum Activation of Convolution): 초점이 맞춰진 영역
+      - SPoC(Sum Pooling of Convolution): `큰 영역`
+      - MAC(Maximum Activation of Convolution): `초점이 맞춰진 영역`
       - GeM(Generalized mean Pooling)
       - Global Pooling method에 성능을 더 높이기 위해서 변형을 주기도 했다.
      </br>
