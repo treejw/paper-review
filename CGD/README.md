@@ -117,6 +117,7 @@ Xc가 H X W차원의 activation들의 집합이라 할 때, global descriptor는
    - diversity control 없이 각 branch의 output으로 얻어지는 다양한 성질을 사용할 수 있다.
 
 
+</br>
 
 ### 3.3 Auxiliary Module: Classification Loss
 
