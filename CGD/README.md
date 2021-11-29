@@ -173,6 +173,7 @@ W, and b are trainable weight, and bias, respectively. f is a global descriptor 
   
  <p align="center"><img src="https://user-images.githubusercontent.com/53847442/143831966-2c99aeb4-23cf-4369-b9cb-4394d2382b9c.png"  width="80%" height="80%"/></p>
 
+</br>
 
 ***
 ## 참고
