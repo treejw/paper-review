@@ -47,3 +47,21 @@
 
 - 이 프레임워크를 사용해서 다른 기법들과 큰 차이를 보이며 SOTA(state-of-the-art)를 달성했다. 
   > (CARS196, CUB200, SOP(Standard Online Products), In-shop(In-shop Clothes))
+
+</br>
+
+## 3. Proposed Framework
+
+CGD 프레임워크를 사용해 여러 개의 global descriptor들을 concatenate 시킨 combine descriptor를 만들어 학습시킨다.
+
+이 논문에서 제안한 프레임워크는 CNN backbone 네트워크와 두 개의 모듈로 이루어져있다.
+
+- 주 모듈: ranking loss를 이용해 여러 global descriptor의 결합으로 이루어진 image representation을 학습한다.
+- 보조 모듈: classification loss를 이용해 CNN을 fine-tune 하도록 돕는다.
+
+CGD를 사용해 학습을 시킬 때, final loss(ranking loss(주 모듈)+classification loss(보조모듈))를 사용한다.
+
+</br>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/53847442/143822053-a5eb42c0-f06f-4985-a288-82be036d3f7d.png"  width="80%" height="80%"/></p>
+
