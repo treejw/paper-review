@@ -62,7 +62,7 @@
 <br>
 
 ### ◼ locality-sensitive hashing
-![image](https://user-images.githubusercontent.com/41243762/145996680-e5227bb0-7eeb-41d0-8dd8-742ef6d8f0fd.png)
+<img src="https://user-images.githubusercontent.com/41243762/145996680-e5227bb0-7eeb-41d0-8dd8-742ef6d8f0fd.png" width="60%">
 - 유사한 데이터를 같은 값으로 hash하는 기법
 <br>
 
@@ -81,15 +81,27 @@
 ※ Multi Round LSH Attention
 - 2~3번을 여러번 진행하여 다양한 결과를 얻음
 
+<br>
 
 ## 4. Reversible layers
-### ◼ 개념
 ![image](https://user-images.githubusercontent.com/41243762/145998549-83f013ef-065c-4427-bef0-3dfd0d9c1b2a.png)
+
 입력값 x를 복사하여 x1, x2로 구성, Reversible Network를 통과한 결과값 y1, y2은 평균하여 y로 변경
 출력값(y1, y2)과 출력 Gradient (y1, y2) 로 입력값(x1, x2)과 입력 Gradient (x1, x2)을 추출
 중간결과물 저장 없이 역전파를 계산할 수 있는 구조
 
 ![image](https://user-images.githubusercontent.com/41243762/145998710-84cf255d-1a0a-4810-b0ff-c40e92616877.png)
+
+## 5. chunks & removes
+![image](https://user-images.githubusercontent.com/41243762/145999530-d32cb5bb-f980-4650-a3b4-d1c153511c84.png)
+<br>
+
+## 6. Experiments
+### ◼ shared-QK
+![image](https://user-images.githubusercontent.com/41243762/145999678-7f7266bb-03d6-48e4-a983-0ad6829a1464.png)
+
+### ◼ locality-sensitive hashing
+![image](https://user-images.githubusercontent.com/41243762/145999805-6d2d6af2-5784-49e1-be26-66400800ecea.png)
 
 ---
 ### 참고
