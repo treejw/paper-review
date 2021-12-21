@@ -1,10 +1,12 @@
 # CLIP: Learning Transferable Visual Models From Natural Language Supervision `2021.02`
 
+<br>
+
 ## 1. Abstract
 Image와 Text를 pair로 학습함으로써 Domain에 robustness가 높은 pretained model을 제안한다.
 -> Zero Shot Transfer을 가능하게 하였다. 
 
-<br><br>
+<br>
 
 ## 2. Model
 ![image](https://user-images.githubusercontent.com/41942097/146925344-497d70b5-7fc0-48e3-bcbc-0270fa3c340c.png)
