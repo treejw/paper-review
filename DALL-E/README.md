@@ -39,7 +39,7 @@
 
 ## Stage 1: Learning the Visual Codebook
 - DALL-E의 목표: Text와 이미지 토큰을 "single stream"으로 하여 Transformer를 학습시키는 것.
-- 이 때, 이미지 토큰으로서 픽섹을 그대로 활용하게 되면 고해상도의 이미지일 경우 엄청난 메모리가 소요됨.
+- 이 때, 이미지 토큰으로서 픽셀을 그대로 활용하게 되면 고해상도의 이미지일 경우 엄청난 메모리가 소요됨.
 - 따라서 VQ-VAE를 통해 이미지를 압축하여 이미지 토큰으로서 사용.
 - **gumble-softmax relaxation** 사용.
 
