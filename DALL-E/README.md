@@ -5,7 +5,7 @@
    - 이에따라 더 복잡한 구조, 손실 함수, 추가 라벨 등을 필요로 하곤 했음. <br><br>
 - 본 논문은 복잡한 가정들을 필요로 하지 않는 간단한 접근법을 제안
    - Text 및 이미지 토큰을 single stream으로 하여 auto-regressive하게 모델링하는 Transformer를 기반으로 함.
-   - 충분한 데이터와 모델 scale이 주어지면, 이 접근법은 zero-sholt 스타일로 평가했을 때에도 domain-specific model들과도 비슷한 성능을 보임.
+   - 충분한 데이터와 모델 scale이 주어지면, 이 접근법은 zero-shot 스타일로 평가했을 때에도 domain-specific model들과도 비슷한 성능을 보임.
 
 <br><br>
 
