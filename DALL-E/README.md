@@ -79,7 +79,8 @@
    - text-to-text attention : 항상 casual mask 적용
    - **image-to-image attention : row / column / convolutional attention mask 적용 가능**
 
-![image](https://user-images.githubusercontent.com/42428487/147655651-dcd82cc2-a191-437e-8981-3f8390052042.png)
+![image](https://user-images.githubusercontent.com/42428487/147659831-350919e9-dce5-44f1-94e4-c108dffc7558.png)
+
 > - 최대 텍스트 길이가 6개 토큰, 이미지 길이가 16(4x4 그리드)개 토큰일 경우, 3가지 유형의 attention masks
 > - (d) causal convolutional attention pattern with a 3x3 kernel (본 논문에서는 11x11 kernel 사용)
 - convolutional attention mask는 마지막 block에서 사용
