@@ -76,7 +76,6 @@
 ### Sparse Attention Masks
 - 여기서 사용되는 Transformer 모델은 Decoder-only model로, 이미지 토큰은 64개의 self-attention layer에서 모든 텍스트 토큰에 접근 가능.
 - self-attention mask를 어떻게 사용하느냐에 따라 세 가지 변형이 가능 <br><br>
-   - text-to-text attention : 항상 casual mask 적용
    - **image-to-image attention : row / column / convolutional attention mask 적용 가능**
 
 ![image](https://user-images.githubusercontent.com/42428487/147659831-350919e9-dce5-44f1-94e4-c108dffc7558.png)
