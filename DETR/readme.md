@@ -75,7 +75,7 @@
 ![image](https://user-images.githubusercontent.com/53847442/148023525-1b4e70d5-fe08-4838-bc9d-2186aac936e9.png)
 
 
-- Decoder의 각 슬롯들은 이미지에 대한 이해 + 각자의 관계를 학습하여 슬롯 개수(N)개 의 임베딩 값을 출력한다. (전체 이미지를 하나의 context로 이용)
+- Decoder의 각 슬롯들은 이미지에 대한 이해 + 각자의 관계를 학습하여 슬롯 개수(N)개 의 임베딩 값을 출력한다.
 - 각 임베딩 값을 FFN을 거쳐 예측한 물체의 유무 + 물체의 위치를 출력한다.
    - NLP와 다르게 순서적 관계가 존재x, set-prediction을 수행한다.
 
