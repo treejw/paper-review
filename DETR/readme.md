@@ -59,6 +59,31 @@
 ### 3-2. Transformers
 ![image](https://user-images.githubusercontent.com/53847442/148019445-dc754df5-118d-4a7f-a96f-7f6d4a84bc91.png)
 
+`<Encoder>`
+- Encoder는 attention machanism 기반으로 feature map의 pixel과 pixel간의 관계를 학습한다.
+- Locality 중심의 CNN과 다르게 global 한 정보를 학습하여 이미지 내 객체의 위치나 관계 등을 학습 할 수 있다.
+
+`<Decoder>`
+- Decoder의 역할은 어떤 입력값을 받아 이미지 내에 존재하는 object 의 클래스 및 위치를 출력하는것
+- Permutation invarient 한 trainsformer 특성때문에 입력값이 서로 달라야 서로 다른 출력값을 낼 수 있다.
+   - 학습이 가능한 positional encoding(object query)를 랜덤하게 초기화하여 입력값으로 사용한다.
+- Encoder-Decoder간의 attention을 통해 어느 query가 어느 위치에서 object를 찾을 수 있을지 학습한다.(물체가 어느 위치에 있을 확률이 높은지)
+- Self-Attention을 통해 자신들의 역할을 어떻게 분배하여 최적의 일대일 매칭을 수행할 수 있을지 학습한다.
+
+`<예시>`
+
+![image](https://user-images.githubusercontent.com/53847442/148023525-1b4e70d5-fe08-4838-bc9d-2186aac936e9.png)
+
+
+- Decoder의 각 슬롯들은 이미지에 대한 이해 + 각자의 관계를 학습하여 슬롯 개수(N)개 의 임베딩 값을 출력한다. (전체 이미지를 하나의 context로 이용)
+- 각 임베딩 값을 FFN을 거쳐 예측한 물체의 유무 + 물체의 위치를 출력한다.
+   - NLP와 다르게 순서적 관계가 존재x, set-prediction을 수행한다.
+
+
+
+
+
+
 ***
 ## 참고
 [Paper](https://arxiv.org/pdf/2005.12872.pdf)
