@@ -36,6 +36,7 @@
 ### 3-1. Architecture
 ![image](https://user-images.githubusercontent.com/53847442/148017271-cd2ab421-0c2e-408f-81ea-6a8dabc86c96.png)
 
+![image](https://user-images.githubusercontent.com/53847442/148026882-d7a782d3-0653-4341-b59b-b1b8b4069960.png)
 
 `DETR의 아키텍쳐는 feature 추출을 위한 CNN backbone, encoder-decoder 구조의 transformer, 최종 detection prediction을 수행하는 FFN(Feed Forward Network)로 이루어져 있다.`
 </br>
@@ -43,8 +44,7 @@
 1) `Backbone`: Image에 대해 CNN을 통해 feature map 추출 (주로 resnet-50과 resnet-101)
 2) `Positional Encoding`: 시퀀스 데이터로 변형 (d x HW) + positional encoding (위치 정보)
      - 1x1 convolution으로 feature map의 channel을 압축하고 feature map의 size (HxW)만큼의 data 가 형성된다.
-     - feature map의 spatial domain에 해당하는 부분이 vector화 되기때문에 position에 관한 정보를 잃게된다.
-     - transformer 구조가 permutation-invariant (순서와 독립된 동일한 출력)이기에 각 unit들에 position 정보를 삽입하는 positional encoding 과정이 필요하다.
+     - feature map의 spatial domain에 해당하는 부분이 vector화 되기때문에 position에 관한 정보를 잃게되므로 positional encoding 과정이 필요하다.
 
 3) `Transformer encoder`: encoder는 앞선 positional encoded sequence data를 입력받아 attention machanism을 거친 data를 출력한다.
 4) `Transformer decoder`: N개 object의 임베딩에 대해 디코딩한다
