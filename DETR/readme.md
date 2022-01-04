@@ -79,34 +79,36 @@
 - 각 임베딩 값을 FFN을 거쳐 예측한 물체의 유무 + 물체의 위치를 출력한다.
    - NLP와 다르게 순서적 관계가 존재x, set-prediction을 수행한다.
 
+</br>
 
 ## 4. Experiment
 ### 4.1 Faster R-CNN과의 비교
-Dataset: COCO minival
-Backbone: ResNet(pre-train ImageNet), ResNet101(pre-train ImageNet)
-훈련 epoch : 300 (Faster R-CNN의 경우 500)
-훈련 시간 : 72 시간
+- Dataset: COCO minival
+- Backbone: ResNet(pre-train ImageNet), ResNet101(pre-train ImageNet)
+- 훈련 epoch : 300 (Faster R-CNN의 경우 500)
+- 훈련 시간 : 72 시간
 
 ![image](https://user-images.githubusercontent.com/53847442/148024167-78a241f0-ab66-4827-86d3-5e9d4cf37043.png)
 </br>
 
 > DETR은 Faster R-CNN에 비해 충분히 높은 성능을 보인다. 그러나 AP_L(큰 object)에 대해서는 높은 성능을 보이지만, AP_S(작은 object)에 대해서는 낮은 성능을 보인다.
-> 
+
 > 연산량 측면에서 보면 DETR이, FPS에서는 Faster R-CNN이 좋은 성능을 보인다.
-> 
+
 > 하지만 이 두 모델 모두 Real-time이나 경량화가 목표가 아니라 비교대상은 아니다.
 
 
 </br>
+
 ![image](https://user-images.githubusercontent.com/53847442/148024487-c7f514ff-b7be-435b-bd53-5fb72f95e229.png)
 </br>
 
 > 인코더의 층수에 따른 영향을 나타낸 표. 인코더의 layer수가 늘어날 수록 AP가 증가하는걸 확인할 수 있다. 
->
+
 > 실험결과를 통해 (인코더 layer 6개를 기준으로) 인코더 layer가 없을때는 AP의 경우 -3.9point , APL의 경우 -6.0까지 떨어 지는 것을 확인했고,  
->
+
 > self-attention이 있는 인코더 layer의 개수가 영향을 끼치는 것을 알 수 있다.
->
+
 >  아래  그림을 보면 인코더의 self-attention과정을 볼 수 있는데, 이렇게 인스턴스가 잘 나누어 진다면 디코더에서 object의 위치와 클래스를 예측하는건 매우 쉬운일이 된다.
 
 ![image](https://user-images.githubusercontent.com/53847442/148024669-6a0ac868-5d20-4e96-a7dd-62f3370490e4.png)
@@ -114,8 +116,17 @@ Backbone: ResNet(pre-train ImageNet), ResNet101(pre-train ImageNet)
 </br>
 
 > 디코더 층수에 따른 영향을 나타낸 표. 인코더의 layer수가 늘어날 수록 AP가 증가하는걸 확인할 수 있다. 
-> 
-> 특히, 1개와 이후간의 차이는 매우 큰데 이 것은 하나의 디코더만 있는 transformers는 하나의 object에 중복된 prediction이 생성되기 쉽기 때문
+
+> 특히, 1개와 이후간의 차이는 매우 큰데 이 것은 하나의 디코더만 있는 transformers는 하나의 object에 중복된 prediction이 생성되기 쉽기 때문이다.
+
+</br>
+
+## 5. Conclution
+- Direct set prediction을 위해 transformers와 이분 매칭 loss를 기반으로 하는 object detector인 DETR을 제안한다.
+
+- 해당 알고리즘은 COCO dataset에서 Faster R-CNN과 유사한 성능을 달성하고, 구현이 간편하여 확장 가능성이 높다.
+
+- Self-attention을 통해 global processing을 수행함으로써 Faster R-CNN보다 큰 object에 대해 높은 성능을 달성하지만 작은 object detection에 대한 개선이 필요하다.
 
 
 ***
