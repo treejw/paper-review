@@ -132,4 +132,5 @@
 ***
 ## 참고
 [Paper](https://arxiv.org/pdf/2005.12872.pdf)
-
+[Blog](https://yskim0.github.io/paper%20review/2020/11/17/DETR/)
+[Blog](https://keyog.tistory.com/32)
