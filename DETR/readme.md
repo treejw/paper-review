@@ -115,7 +115,10 @@
 
 </br>
 
-> 디코더 층수에 따른 영향을 나타낸 표. 인코더의 layer수가 늘어날 수록 AP가 증가하는걸 확인할 수 있다. 
+![image](https://user-images.githubusercontent.com/53847442/148028343-157a5137-a2f3-4494-9ebd-2f3e5d457a83.png)
+
+
+> 디코더 층수에 따른 영향을 나타낸 표. 디코더의 layer수가 늘어날 수록 AP가 증가하는걸 확인할 수 있다. 
 
 > 특히, 1개와 이후간의 차이는 매우 큰데 이 것은 하나의 디코더만 있는 transformers는 하나의 object에 중복된 prediction이 생성되기 쉽기 때문이다.
 
