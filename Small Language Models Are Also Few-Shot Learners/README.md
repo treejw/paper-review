@@ -54,9 +54,7 @@
 
 
 ---
-- paper [It’s Not Just Size That Matters:
-Small Language Models Are Also Few-Shot Learners] | [Exploiting Cloze Questions for Few Shot Text Classification and Natural
-Language Inference](https://arxiv.org/pdf/2001.07676.pdf)
+- paper [It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners] | [Exploiting Cloze Questions for Few Shot Text Classification and Natural Language Inference](https://arxiv.org/pdf/2001.07676.pdf)
 (https://arxiv.org/pdf/2009.07118.pdf)
 - 참고 사이트: [youtube](https://www.youtube.com/watch?v=q5FGZBqK-vc&t=859s) 
 - [아기여우's blog](https://littlefoxdiary.tistory.com/62)
