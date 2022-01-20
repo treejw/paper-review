@@ -1,10 +1,4 @@
 # Paper Review
 
-### 참여자
+### Contributors
 [treejw](https://github.com/treejw), [lxzun](https://github.com/lxzun), [YoungGaLee](https://github.com/YoungGaLee), [SangKyuu](https://github.com/SangKyuu), [Nayoung1124](https://github.com/Nayoung1124)
-
-<br> 
-
-### 참고
-[NLP 논문 리스트](https://github.com/treejw/Paper_Review/issues/1)
-[CV 논문 리스트](https://github.com/treejw/Paper_Review/issues/2)
