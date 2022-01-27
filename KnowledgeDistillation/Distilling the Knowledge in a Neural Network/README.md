@@ -84,4 +84,4 @@
 
 ---
 - [paper](https://arxiv.org/pdf/1503.02531.pdf)
-- [리뷰 참고](https://dsbook.tistory.com/324)
+- [total loss 수식 참고](https://dsbook.tistory.com/324)
