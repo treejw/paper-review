@@ -81,3 +81,7 @@
 # 5. Training ensembles of specialists on very big datasets
 ![image](https://user-images.githubusercontent.com/41942097/151293353-51393ad4-1660-4bad-b73a-6ba5c289a1d4.png)
 
+
+---
+- [paper](https://arxiv.org/pdf/1503.02531.pdf)
+- [리뷰 참고](https://dsbook.tistory.com/324)
