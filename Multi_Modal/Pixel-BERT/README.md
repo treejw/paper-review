@@ -132,7 +132,7 @@ BERT의 pre-training 중 NSP(Next Sentence Prediction) 방식과 거의 유사
 ```
 - 특히, IR task의 경우, image에 대한 global description을 이해하는 것이 필요. --> Pixel-BERT는 이러한 점에서 image pixel을 사용한 것이 장점으로 작용
 
-<img width="800" src="https://user-images.githubusercontent.com/42428487/154554533-45cbaf75-2691-41d5-8723-fddc5752b7b4.png">  <br>
+<img width="700" src="https://user-images.githubusercontent.com/42428487/154554533-45cbaf75-2691-41d5-8723-fddc5752b7b4.png">  <br>
 <img width="700" src="https://user-images.githubusercontent.com/42428487/154552797-f487b5d5-6364-4c88-bfdc-da882dfde3b3.png">
 
 
