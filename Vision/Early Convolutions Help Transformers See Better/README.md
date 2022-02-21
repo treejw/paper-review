@@ -1,6 +1,7 @@
-# Early Convolutions Help Transformers See Better `(2021) Facebook AI`
+# Early Convolutions Help Transformers See Better 
+`(2021)` `Facebook AI`
 
-## 1. Abstract
+## 0. Abstract
 
 - **Vision Transformer `(ViT)` 는 표준 이하의 성능을 보인다.**
 
@@ -18,6 +19,22 @@
    - 그 결과, 후자의 모델이 안정성이 크게 향상되고 최대 성능을 향상 시키면서 동시에 연산량과 런타임은 유지하는것을 확인했다.
    - 이 효과는 모델 연산량과 데이터셋 규모에 상관 없이 적용된다.
    - 이러한 결과를 통해 ViT 모델에 standard lightweight conv를 사용할것을 권고하게 되었다.
+
+</br>
+
+## 1. Introduction
+- CNN을 대체할 방법으로 ViT를 많이 연구하고 있다. 하지만 ViT는 표준 이하의 최적화 가능성을 보이고 있다.
+   - ViT는 optimizer과 데이터셋, 학습 hyperparameter , 네트워크 깊이 등에 굉장히 민감하다.
+
+- 반면에, Conv는 최적화가 쉽고 강력하다. 
+   - SGD, basic data argumentation, standard hyperparameter 값 기반의 학습이 수년간 널리 사용되어 왔다.
+   
+- 이 둘의 차이는 `초기의 이미지 처리`에 있다.
+   - ViT는 입력 이미지를 pxp의 겹치지 않는 패치로 패치화 하여 인코더의 입력으로 사용한다.
+   - stride-p와 p x p kernel size (p=16 / 일반적인 CNN 설계보다는 훨씬 큰 값)
+   - 
+   <img src="https://user-images.githubusercontent.com/53847442/154906083-45c67f09-c4ec-4848-a902-acc510b8bf9a.png" width="20%" height="20%">
+
 
 
 ## 2. Related Work
