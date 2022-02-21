@@ -14,8 +14,10 @@
    - ViT의 초기 image를 patch 단위로 자를 때 사용하는 stride-p와 p x p kernel size를 지닌 Conv 연산 때문에 어려운것이다.
    - 일반적으로 `p = 16`을 사용하는데, 보통 CNN을 설계할때 이렇게 큰 커널 사이즈와 큰 스트라이드의 조합은 사용하지 않는다.
   
-- 위 주장의 정당성을 확인하기 위해 original ViT VS stride-2, 3x3 conv를 이용한 ViT를 비교해 보겠다.
- 
+- 위 주장의 정당성을 확인하기 위해 original ViT VS `stride-2, 3x3 conv`를 이용한 ViT를 비교해 보겠다. 
+   - 그 결과, 후자의 모델이 안정성이 크게 향상되고 최대 성능을 향상 시키면서 동시에 연산량과 런타임은 유지하는것을 확인했다.
+   - 이 효과는 모델 연산량과 데이터셋 규모에 상관 없이 적용된다.
+   - 이러한 결과를 통해 ViT 모델에 standard lightweight conv를 사용할것을 권고하게 되었다.
 
 
 ## 2. Related Work
