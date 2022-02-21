@@ -32,11 +32,35 @@
 - 이 둘의 차이는 `초기의 이미지 처리`에 있다.
    - ViT는 입력 이미지를 pxp의 겹치지 않는 패치로 패치화 하여 인코더의 입력으로 사용한다.
    - stride-p와 p x p kernel size (p=16 / 일반적인 CNN 설계보다는 훨씬 큰 값)
-   - 
-   <img src="https://user-images.githubusercontent.com/53847442/154907920-a0b60c12-9126-42fa-9c7c-c67d9ae71596.png" width="50%" height="50%">
+     <img src="https://user-images.githubusercontent.com/53847442/154908132-74fdbb3e-e943-48e9-bf28-8309decfb8f4.png" width="50%" height="50%">
 
+   - 그래서 저자는 아래 둘을 비교하고자 한다.
+   
+     ![image](https://user-images.githubusercontent.com/53847442/154908454-e9996561-28af-44d0-82b8-8b36c91da58f.png)
+ 
 
+    
+      - ViT의 패치화 시스템을 거의 동일한 복잡성을 가진 conv network로 교체한다.
+      - transformer block 수를 하나 줄인다. (동일한 연산량을 갖도록)
+      - 결과 모델을 ViTC, original을 ViT라고 하면, ViTC 가 이김
+</br>
+
+```   
+  <결과>  
+         -  converges faster
+         - 처음으로 큰 정확도 저하 없이 AdamW 또는 SGD를 사용할 수 있었음
+         - lr 과 weight decay 선택에 있어서 안정적임
+         - ImageNet top1에서의 CNN의 정확도를 능가
+```
+</br>
 
 ## 2. Related Work
+1) Convolutional neural networks (CNNs)
+2) Self-attention in vision models
+3) Vision transformer (ViT)
+4) ViT improvements
+
+</br>
+
 ## 3. Vision Transformer Architectures
 ## 4. Measuring Optimizability
