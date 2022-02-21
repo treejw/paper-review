@@ -33,7 +33,7 @@
    - ViT는 입력 이미지를 pxp의 겹치지 않는 패치로 패치화 하여 인코더의 입력으로 사용한다.
    - stride-p와 p x p kernel size (p=16 / 일반적인 CNN 설계보다는 훨씬 큰 값)
    - 
-   <img src="https://user-images.githubusercontent.com/53847442/154906083-45c67f09-c4ec-4848-a902-acc510b8bf9a.png" width="20%" height="20%">
+   <img src="https://user-images.githubusercontent.com/53847442/154907920-a0b60c12-9126-42fa-9c7c-c67d9ae71596.png" width="50%" height="50%">
 
 
 
