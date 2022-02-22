@@ -107,3 +107,13 @@ CNN은 SGD 또는 AdamW 모두 최적화가 잘 되며, SGD를 일반적으로 �
 lr, weight decay는 SGD와 AdamW의 최적화에 가장 중요한 하이퍼 파라미터들이다. 
 실험에서는 lr과 wd의 다양한 선택으로 훈련된 모델의 오차 분포 함수(EDF)를 비교하여 매개 변수 안정성을 알아볼 것
 (모델에 대한 EDF를 생성하기 위해 lr 및 wd의 값을 랜덤하게 샘플링하고 그에 따라 학습을 진행할 것)
+
+
+### Peak performance
+우리는 최고 성능을 가진 최적화 도구와 인위적으로 조정된 lr 및 weight decay를 사용하여 400 epoch 학습 시킨 모델을 평가한다.
+
+## 5. Experinment
+![image](https://user-images.githubusercontent.com/53847442/155059421-d92b95ea-a179-4bc2-9774-12a1fa3b059a.png)
+![image](https://user-images.githubusercontent.com/53847442/155059550-5fae759e-b7aa-4536-903c-e141bd398dad.png)
+> Figure 4: Hyperparameter stability for AdamW (lr and wd)
+> 임의의 lr 및 wd(각 모델에 대한 최적 값 주변의 고정된 폭 간격에서)를 사용하여 50 Epoch 동안 모델의 64개 인스턴스를 훈련
