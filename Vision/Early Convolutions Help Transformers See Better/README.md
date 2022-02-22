@@ -68,7 +68,7 @@
 ## 3. Vision Transformer Architectures
 ### The vision transformer (ViT)
 입력 이미지를 겹치지 않는 pxp 패치로 분할하고 D 차원의 특징 벡터에 선형 투영한다.
-이 임베딩은 classification head가 뒤에 붙어 변압기 인코더의 입력으로 쓰인다.
+이 임베딩은 classification head가 뒤에 붙어 transformer 인코더의 입력으로 쓰인다.
 
 ### ViTp models (P: patch)
 선행 연구에서는 ViT-Tiny, ViT-Small, ViT-Base 등과 같은 다양한 크기의 ViT 모델을 제안했다.
