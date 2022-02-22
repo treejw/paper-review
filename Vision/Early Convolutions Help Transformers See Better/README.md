@@ -55,12 +55,55 @@
 </br>
 
 ## 2. Related Work
-1) Convolutional neural networks (CNNs)
-2) Self-attention in vision models
-3) Vision transformer (ViT)
-4) ViT improvements
+> Convolutional neural networks (CNNs)
+
+> Self-attention in vision models
+
+> Vision transformer (ViT)
+
+> ViT improvements
 
 </br>
 
 ## 3. Vision Transformer Architectures
+### The vision transformer (ViT)
+입력 이미지를 겹치지 않는 pxp 패치로 분할하고 D 차원의 특징 벡터에 선형 투영한다.
+이 임베딩은 classification head가 뒤에 붙어 변압기 인코더의 입력으로 쓰인다.
+
+### ViTp models (P: patch)
+선행 연구에서는 ViT-Tiny, ViT-Small, ViT-Base 등과 같은 다양한 크기의 ViT 모델을 제안했다.
+일반적으로 1기가플롭(GF), 2GF, 4GF, 8GF 등으로 표준화된 CNN과의 비교를 용이하게 하기 위해 원래 ViT 모델을 수정하여 이러한 복잡성에 대한 모델을 얻는다. 
+
+![image](https://user-images.githubusercontent.com/53847442/155050175-2cdce4f9-ed18-41aa-b91e-cc2732147e3d.png)
+
+### Convolutional stem design
+3x3 conv를 쌓고 마지막에transformer encoder의 d 차원 입력과 size를 맞추기 위해 1x1 conv를 사용한다. 
+224x224 이미지를 3x3 conv를 이용하여 다운샘플링하여 ViTp의 입력과 동일한 size로 만든다.
+(3x3 stride 2, output channels 수를 두배로 하거나, stride 1, output channel 수를 유지하거나)
+
+ViTp 대신 ViTc를 사용할때, transformer 블럭 하나를 제거하여 연산량을 제어한다. (transformer block 1 = cnn)
+이 모델은 최고 성능을 내도록 설계된것이 아니라 단순화하여 주장의 정당성을 보이기 위한것이다.
+
+
+### ViTc models 
+![image](https://user-images.githubusercontent.com/53847442/155055340-06ba9f66-25a3-4cc1-8065-b2b9307080e6.png)
+
+이 표는 transformer 블럭 하나를 빼고 cnn을 이용했을때 복잡도에 거의 차이가 없음을 보인다. 
+논문의 목표는 하이브리드 ViT 설계 공간을 탐색하는 것이 아니라, 패치화 스템을 표준 CNN 설계 관행을 따르는 최소 cnn으로 단순히 교체하는 경우의 최적화 효과를 연구하는 것임을 강조.
+
 ## 4. Measuring Optimizability
+ImageNet의 수렴 속도를 참고하여, 400 Epoch에서의 top-1의 정확도를 대략적인 점근적 결과로 정의한다
+
+### Optimizer stability
+선행 연구들은 AdamW를 사용하여 최적화 했고, 이 외의 optimizer에 대한 성능은 제시하지 않았다.
+하지만 ImageNet에 대한 정확도가 하락했다는 report가 있다.
+CNN은 SGD 또는 AdamW 모두 최적화가 잘 되며, SGD를 일반적으로 사용한다. 
+   - SGD는 하이퍼 파라미터가 적고(예: AdamW의 β2 튜닝이 중요할 수 있음) 
+   - 최적화 상태 메모리가 50% 적게 필요하므로 확장이 용이하다.
+   
+우리는 최적기 안정성을 AdamW와 SGD 사이의 정확도 격차로 정의한다
+
+### Hyperparameter (lr, wd) stability
+lr, weight decay는 SGD와 AdamW의 최적화에 가장 중요한 하이퍼 파라미터들이다. 
+실험에서는 lr과 wd의 다양한 선택으로 훈련된 모델의 오차 분포 함수(EDF)를 비교하여 매개 변수 안정성을 알아볼 것
+(모델에 대한 EDF를 생성하기 위해 lr 및 wd의 값을 랜덤하게 샘플링하고 그에 따라 학습을 진행할 것)
