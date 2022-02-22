@@ -114,6 +114,16 @@ lr, weight decay는 SGD와 AdamW의 최적화에 가장 중요한 하이퍼 파�
 
 ## 5. Experinment
 ![image](https://user-images.githubusercontent.com/53847442/155059421-d92b95ea-a179-4bc2-9774-12a1fa3b059a.png)
-![image](https://user-images.githubusercontent.com/53847442/155059550-5fae759e-b7aa-4536-903c-e141bd398dad.png)
+![image](https://user-images.githubusercontent.com/53847442/155059925-24391184-799f-47d2-979d-5992a501586e.png)
 > Figure 4: Hyperparameter stability for AdamW (lr and wd)
+
+![image](https://user-images.githubusercontent.com/53847442/155060634-0ee225bb-a952-4add-beb0-d9b89e1fc44f.png)
+> Figure 5: Hyperparameter stability for SGD (lr and wd)
+
+
 > 임의의 lr 및 wd(각 모델에 대한 최적 값 주변의 고정된 폭 간격에서)를 사용하여 50 Epoch 동안 모델의 64개 인스턴스를 훈련
+> EDF 그래프가 가파를수록 안정성이 우수한것
+
+
+![image](https://user-images.githubusercontent.com/53847442/155060846-25a70d7a-9929-4b32-a6cb-d630811c7d68.png)
+> Figure 6: Peak performance
