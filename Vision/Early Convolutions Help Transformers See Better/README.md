@@ -1,4 +1,4 @@
-# Early Convolutions Help Transformers See Better 
+# [Early Convolutions Help Transformers See Better](https://arxiv.org/abs/2106.14881)
 `(2021)` `Facebook AI`
 
 ## 0. Abstract
