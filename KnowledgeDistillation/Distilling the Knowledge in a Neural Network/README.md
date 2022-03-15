@@ -1,6 +1,6 @@
 # Distilling the Knowledge in a Neural Network `2015.03`
 
-# 1. Abstarct
+# 1. Abstract
 - task들에 대하여 model들을 ensemble하여 예측하는 것은 computationally expensive하다.
 - 학습된 모델들의 정보들은 작은 모델로 효과적인 방법으로 전파할 수 있는 방법을 제안한다. (Distillation)
 
