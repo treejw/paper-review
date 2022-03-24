@@ -92,7 +92,7 @@
 
 1. User의 검색 **Query** 입력
 2. DB로부터 (combination of machine-learned models and human-defined rules 을 통해) 후보 앱들을 **Retrieval**
-3. **🔸Ranking🔸(Wide & Deep Learning Framework)**을 통해 후보 앱들의 점수를 메겨 정렬
+3. **🔸Ranking🔸(Wide & Deep Learning Framework)** 을 통해 후보 앱들의 점수를 메겨 정렬
    - 점수는 user 정보 x가 주어졌을 때, user가 y앱에 action할 확률인 P(y|x)를 의미함.
 
 <br><br>
