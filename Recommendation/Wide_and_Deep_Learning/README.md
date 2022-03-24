@@ -97,7 +97,7 @@
 
 <br><br>
 
-## 3. Wide & Deeo Learning
+## 3. Wide & Deep Learning
 
 ### 3.1 The Wide Component
 ![image](https://user-images.githubusercontent.com/42428487/159812449-d5f71635-5bdd-41ed-ac49-7feac3b2142e.png)
@@ -124,7 +124,7 @@
 
 ### 3.3 Joint Training of Wide & Deep Model
 ![image](https://user-images.githubusercontent.com/42428487/159811522-b37f232c-ece7-4caf-87ee-90e60d4a1f36.png)
-- 앙상블과달리, output의 gradient를 wide와 deep 모델에 동시에 backpropatation하여 학습
+- 앙상블과 달리, output의 gradient를 wide와 deep 모델에 동시에 backpropatation하여 학습
 - wide & deep model의 prediction은 아래 수식과 같이 구해짐. <br>
    <img src="https://user-images.githubusercontent.com/42428487/159814710-8b0969fe-2eba-441b-83e0-2f89738877c9.png" width="380">
    - 각 모델에서 나온 결과를 더하고 sigmoid 함수를 통과시킨 결과가 최종 output
@@ -139,7 +139,6 @@
    >  A/B Test: 기존 서비스(A)와 새로 적용하고 싶은 서비스(B)를 통계적인 방법으로 비교하여 새로운 서비스가 기존 서비스에 비해 정말 효과가 있는지를 알아보는 방법
    - **대조군 (control)** 그룹의 경우, User의 1%가 무작위로 선택됨. / Wide-Only logistic regression 모델
    - **실험군** 그룹의 경우, 동일한 Features 집합으로 훈련된 Wide & Deep 모델이 생성한 추천이 제시됨.
-- 
 
 <br><br>
 
