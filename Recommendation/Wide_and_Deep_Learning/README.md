@@ -135,10 +135,11 @@
 
 <img src="https://user-images.githubusercontent.com/42428487/159815006-4c6407c7-bf48-4885-945c-54dc1ccae937.png" width="500">
 
-- 3주간 A/B Testing 프레임워크에서 실시간 온라인 실험을 수행함.
+- 각 추천시스템 사용에 따른 어플 다운로드 증감을 분석하는 App acquisition gain 평가
+- 3주간 A/B Test로 진행. 각 모델을 전체의 1%에 해당하는 유저들에게 적용함.
    >  A/B Test: 기존 서비스(A)와 새로 적용하고 싶은 서비스(B)를 통계적인 방법으로 비교하여 새로운 서비스가 기존 서비스에 비해 정말 효과가 있는지를 알아보는 방법
-   - **대조군 (control)** 그룹의 경우, User의 1%가 무작위로 선택됨. / Wide-Only logistic regression 모델
-   - **실험군** 그룹의 경우, 동일한 Features 집합으로 훈련된 Wide & Deep 모델이 생성한 추천이 제시됨.
+   - offline test set을 통해 얻은 Offline AUC의 경우, Wide & Deep이 가장 우수한 성능을 보였음. (그러나 온라인보다는 작은 영향)
+      - 실제 상황에서는 label이 고정되어 있지않고, 훨씬 더 다양한 경우가 존재하므로 Memorization과 Generlization을 함께 고려하는 Wide & Deep 구조가 효과가 있엄음을 나타냄. 
 
 <br><br>
 
