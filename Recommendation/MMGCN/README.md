@@ -113,6 +113,7 @@ W2 trainable weight matrix를 곱해주어 모든 modality가 같은 공간에 �
 ![image](https://user-images.githubusercontent.com/53847442/163233324-79cf0a5d-de18-4629-ae29-b34891806733.png)
 
 <br>
+
 ```GraphSAGE, NGCF는 Multi-modal을 적용한 모델이 아니기 때문에 공평성을 위해 방법을 바꿔 실험 
 - GraphSAGE: multi-modal features를 노드의 features로 통합하여 모델을 학습
 - NGCF: multi-modal features를 side-information으로 간주하여 모델을 학습
@@ -124,6 +125,7 @@ W2 trainable weight matrix를 곱해주어 모든 modality가 같은 공간에 �
 ![image](https://user-images.githubusercontent.com/53847442/163233527-2e424554-6ea0-43cf-b575-97dbd9edf7aa.png)
 
 <br>
+
 - 유저 5명을 랜덤 샘플링해서 다른 modality에 대해 선호도의 차이가 있는지 t-SNE를 통해 시각화
 - 노란색으로 표현된 유저1의 경우 Visual Modality에서 뚜렷한 차이를 보이지 않고 분산됨, Textual Modality에서는 전쟁과 로맨스의 특성들로 나누어짐
 - 파란색으로 표현된 유저2의 경우 Visual Modality에서 고전주의 포스터와 애니메이션 포스터로 특성들이 나누어졌지만, Textual Modality에서는 특징 없음 
