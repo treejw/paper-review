@@ -47,12 +47,32 @@
 3) 중심 노드로부터 연결된 modality의 정보를 표현할 수 있는 최종 노드를 생성
 4) 최종적으로 유저 노드를 기준으로 합쳐진 modality와, 아이템 노드를 기준으로 합쳐진 modality가 하나의 벡터를 만들어 행렬 연산을 통해 유저에게 새로운 아이템을 추천한다.
 
-참고로, 각 modality마다 feautres vector로 만들어 주기 위해 
 ```
+참고로, 각 modality마다 feautres vector로 만들어 주기 위해
+
 Visual modality:pre-trained ResNet50
 Acoustic Modality:VGGish
 Textual Modality:Sentence2Vector
 ```
+
+###3.2 Aggregation layer
+- 중심 노드로부터 이웃이 되는 노드들의 정보들을 합쳐주는 역할
+- hm = f (Nu)
+- 중심 노드로부터 연결된 이웃 modality의 기여도를 수집
+- Mean Aggregation, Max Aggregation
+![image](https://user-images.githubusercontent.com/53847442/163156494-b9d52e0e-b1b6-460f-a2f5-91271bc418c4.png)
+![image](https://user-images.githubusercontent.com/53847442/163156565-bdcf7670-5af8-42be-87d4-17deb0874424.png)
+
+```
+Nu는 유저 노드(중심이 되는 노드)의 이웃, 즉 유저 노드(중심 노드)를 기준으로 상호작용 있는 이웃 노드를 의미
+W1,m은 이웃 노드들의 정보를 얻기 위한  trainable transformation matrix를 의미
+jm은 modality m에 속하는 아이템을 의미
+```
+
+### 3.3 Combination layer
+- aggregation layer를 수행하여 얻은 노드의 구조적 정보 hm과 유저 노드가 해당 modality에서 가지고 있었던 본래의 정보 um 그리고 유저 노드에서 각 modal에 속하는 아이템의 연결 정보를 알려주는 uid를 통해 하나의 통합된 representation으로 만든다.
+- 이때 각 modality의 features vector는 서로 다른 차원을 가지게 되는데, ID 임베딩 차원과 같아질 수 있도록 
+W2 trainable weight matrix를 곱해주어 모든 modality가 같은 공간에 표현될 수 있도록 만든다.
 
 <br><br>
 
