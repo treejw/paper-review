@@ -33,7 +33,7 @@
 
 <br>
 
-**Contribution**
+### **Contribution**
 1. 다양한 modality의 정보 교환이 어떻게 사용자 선호도를 반영하고, 추천의 성능에 미치는 영향을 연구
 2. MGCN이라는 새로운 모델을 제안해 유저-아이템 이분형 그래프에서 각 modality의 정보가 전파되어 아이템 컨텐츠 정보를 활용한 더 나은 유저의 repsentations을 계산
 3. Tiktok, Kwai, MovieLense 세 가지 데이터 셋을 활용해 최신 SOTA 모델들과 비교하여 제안 모델의 우수성을 증명
@@ -41,6 +41,18 @@
 <br><br>
 
 ## 3. MODEL FRAMEWORK
+![image](https://user-images.githubusercontent.com/53847442/163125750-077deea0-a1a6-46e0-88ff-42915a0a3eb4.png)
+1) 각 modality 별로 이분형 그래프(bipartite graph)로 나타내고 
+2) Aggregation Layer와 Combination Layer를 통과
+3) 중심 노드로부터 연결된 modality의 정보를 표현할 수 있는 최종 노드를 생성
+4) 최종적으로 유저 노드를 기준으로 합쳐진 modality와, 아이템 노드를 기준으로 합쳐진 modality가 하나의 벡터를 만들어 행렬 연산을 통해 유저에게 새로운 아이템을 추천한다.
+
+참고로, 각 modality마다 feautres vector로 만들어 주기 위해 
+```
+Visual modality:pre-trained ResNet50
+Acoustic Modality:VGGish
+Textual Modality:Sentence2Vector
+```
 
 <br><br>
 
