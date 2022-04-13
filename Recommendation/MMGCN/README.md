@@ -105,5 +105,34 @@ W2 trainable weight matrix를 곱해주어 모든 modality가 같은 공간에 �
 <br><br>
 
 ## 4. Experiments
+- 데이터 셋은 Tiktok, Kwai, MovieLens 데이터를 사용해서 실험을 진행하였으며 
+- Kwai 데이터 셋을 제외하고 모두 Visual, Acousitc, Textual modalities를 활용
+
+<br>
+
+![image](https://user-images.githubusercontent.com/53847442/163233324-79cf0a5d-de18-4629-ae29-b34891806733.png)
+
+<br>
+```GraphSAGE, NGCF는 Multi-modal을 적용한 모델이 아니기 때문에 공평성을 위해 방법을 바꿔 실험 
+- GraphSAGE: multi-modal features를 노드의 features로 통합하여 모델을 학습
+- NGCF: multi-modal features를 side-information으로 간주하여 모델을 학습
+  (이에 대한 정확한 설명은 없지만 NGCF의 Embedding Layer에서 modality 정보를 반영했다고 판단함)
+```
+
+<br>
+
+![image](https://user-images.githubusercontent.com/53847442/163233527-2e424554-6ea0-43cf-b575-97dbd9edf7aa.png)
+
+<br>
+- 유저 5명을 랜덤 샘플링해서 다른 modality에 대해 선호도의 차이가 있는지 t-SNE를 통해 시각화
+- 노란색으로 표현된 유저1의 경우 Visual Modality에서 뚜렷한 차이를 보이지 않고 분산됨, Textual Modality에서는 전쟁과 로맨스의 특성들로 나누어짐
+- 파란색으로 표현된 유저2의 경우 Visual Modality에서 고전주의 포스터와 애니메이션 포스터로 특성들이 나누어졌지만, Textual Modality에서는 특징 없음 
+- 이를 통해서 유저들이 서로 다른 modality에서 각각 다른 선호도를 갖고 있다는 것을 증명함
 
 <br><br>
+
+## 5. Conclusion
+4. Conclusion
+- micro-video에서 좋은 추천을 제공하기 위해 유저와 아이템의 연결성을 고려하는 것이 중요할 뿐만 아니라 아이템 컨텐츠의 다양한 modality들을 고려하는 것이 중요
+- 각각의 modality의 representation을 학습하기 위해 유저-아이템 간의 그래프 구조를 활용한 MMGCN 모델을 제안
+- 해당 모델의 경우 aggregation layer와 combination layer를 통해 modality의 특성들을 반영할 수 있었으며, Tiktok, Kwai, MovieLens 데이터에서 제안 모델의 우수성을 보임
