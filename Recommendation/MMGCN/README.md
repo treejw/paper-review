@@ -60,6 +60,8 @@ Textual Modality:Sentence2Vector
 - hm = f (Nu)
 - 중심 노드로부터 연결된 이웃 modality의 기여도를 수집
 - Mean Aggregation, Max Aggregation
+<br>
+
 ![image](https://user-images.githubusercontent.com/53847442/163156494-b9d52e0e-b1b6-460f-a2f5-91271bc418c4.png)
 ![image](https://user-images.githubusercontent.com/53847442/163156565-bdcf7670-5af8-42be-87d4-17deb0874424.png)
 
@@ -73,7 +75,33 @@ jm은 modality m에 속하는 아이템을 의미
 - aggregation layer를 수행하여 얻은 노드의 구조적 정보 hm과 유저 노드가 해당 modality에서 가지고 있었던 본래의 정보 um 그리고 유저 노드에서 각 modal에 속하는 아이템의 연결 정보를 알려주는 uid를 통해 하나의 통합된 representation으로 만든다.
 - 이때 각 modality의 features vector는 서로 다른 차원을 가지게 되는데, ID 임베딩 차원과 같아질 수 있도록 
 W2 trainable weight matrix를 곱해주어 모든 modality가 같은 공간에 표현될 수 있도록 만든다.
+<br>
 
+![image](https://user-images.githubusercontent.com/53847442/163229111-0f6c697e-32d1-439d-978d-993473d2f950.png)
+<br>
+
+- Combination 방법
+  - Concatenation Combination: Aggregated 된 정보와 modality의 고유 정보를 독립된 정보로 가정하고 concat
+  - Element-wise Combination: 두 정보 간 상호작용을 고려
+
+
+  ![image](https://user-images.githubusercontent.com/53847442/163229515-45f69cf7-2d96-414a-b204-31ed801412b7.png)
+<br>
+
+### 3.4 Model Prediction
+- 각 modality 별로 aggregation layer와 combination layer를 여러 번 쌓아서 유저-아이템 그래프 간의 고차연결성(high-order connectivity) 구조를 만든다.
+- 아이템 노드에서도 위와 유사한 방식으로 representations을 만든다.
+- modality마다 구한 representations을 합쳐서 아래와 같이 modality의 특성들이 반영한 user vector와 item vector를 구한다.
+- u(m)L 은L번째 multi-modal의 combination layer의 출력값을 의미
+<br>
+
+![image](https://user-images.githubusercontent.com/53847442/163230109-b1af2ca9-c937-4042-a592-ef9dcbdc71ef.png)
+(최종 유저, 아이템 representation)
+<br>
+
+- update는 추천시스템에서 흔히 사용되는 Bayesian Personalized Ranking loss를 사용
+- loss는 실제 유저가 관찰한 아이템(i)과 관찰하지 않은 아이템(i′)의 차이를 계산하여 i와i′의 점수가 극대화되도록 모델 파라미터를 업데이트
+- 
 <br><br>
 
 ## 4. Experiments
