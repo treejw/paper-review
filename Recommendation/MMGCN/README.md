@@ -55,7 +55,7 @@ Acoustic Modality:VGGish
 Textual Modality:Sentence2Vector
 ```
 
-###3.2 Aggregation layer
+### 3.2 Aggregation layer
 - 중심 노드로부터 이웃이 되는 노드들의 정보들을 합쳐주는 역할
 - hm = f (Nu)
 - 중심 노드로부터 연결된 이웃 modality의 기여도를 수집
