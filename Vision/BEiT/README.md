@@ -14,7 +14,7 @@
 
 ![image](https://user-images.githubusercontent.com/41243762/165305346-879d9e95-9cd5-48b7-8995-32d85ae977c8.png)
 
-patched image: 14 x 14 x (16 x 16 x 3)
+patched image: 14 x 14 x (16 x 16 x 3) <br>
 visual token: 14 x 14
 
 <br>
